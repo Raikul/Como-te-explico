@@ -1,31 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Whirlpool : MonoBehaviour {
 
-    MaskController light;
+    PlayerMaskController light;
     bool whirpooled;
 
     float value = 15;
 
     // Use this for initialization
     void Start () {
-
         whirpooled = false;
-	}
-	
-
-
-    void Update()
-    {
-        light = GameObject.FindWithTag("PlayerMask").GetComponent<MaskController>();
-        
+        light = Game.PlayerLight;
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (!Input.GetKeyDown(KeyCode.UpArrow))
+        if (!Input.GetKey(KeyCode.Space))
         {
             //light.size += value;
             whirpooled = true;
