@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     float rotation;
     public float rotationSpeed;
     Transform cam;
+    AudioSource blah;
 
     PlayerMaskController plMsk;
 
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour {
         rb2D = GetComponent<Rigidbody2D>();
         cam = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
         plMsk = GameObject.FindWithTag("PlayerMask").GetComponent<PlayerMaskController>();
-
+        blah = GetComponent<AudioSource>();
     }
 	
 	
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.CompareTag("Beacon"))
             plMsk.decays = false;
-
+        //blah.Play();
       
     }
 

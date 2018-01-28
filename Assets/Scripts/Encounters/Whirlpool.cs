@@ -22,7 +22,7 @@ public class Whirlpool : MonoBehaviour {
 
         if (whirpooled)
         {
-            playerLight.size -= 1 * Time.deltaTime;
+            playerLight.size -= 3 * Time.deltaTime;
         }
     }
 }

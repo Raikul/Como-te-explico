@@ -16,8 +16,7 @@ public class InceptionController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        Application.OpenURL("http://romantic-ride-38b778.bitballoon.com/");
+        Application.OpenURL("http://sad-jennings-049ef3.bitballoon.com");
         Debug.Log("URLD");
     }
 }
