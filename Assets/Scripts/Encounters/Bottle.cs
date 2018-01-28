@@ -3,33 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bottle : MonoBehaviour {
-    MaskController light;
-
-  
+    PlayerMaskController playerLight;
     float value = 15;
-   
 
-     
-    
-    // Use this for initialization
-    void Start () {
-        
-        
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        light = GameObject.FindWithTag("PlayerMask").GetComponent<MaskController>();
-    }
-
-    void OnTriggerStay2D(Collider2D other)
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            light.size += value;
-            //Destroy(this.gameObject);
-                }
+        playerLight = Game.PlayerLight;
     }
 
-    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        playerLight.size += value;
+        Destroy(this.gameObject);
+    }
 }
