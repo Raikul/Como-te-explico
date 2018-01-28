@@ -2,15 +2,12 @@
 
 public class Whirlpool : MonoBehaviour {
 
-    PlayerMaskController light;
+    PlayerMaskController playerLight;
     bool whirpooled;
-
-    float value = 15;
-
-    // Use this for initialization
+    
     void Start () {
         whirpooled = false;
-        light = Game.PlayerLight;
+        playerLight = Game.PlayerLight;
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -25,8 +22,7 @@ public class Whirlpool : MonoBehaviour {
 
         if (whirpooled)
         {
-            light.size -= 1 * Time.deltaTime;
-
+            playerLight.size -= 1 * Time.deltaTime;
         }
     }
 }
