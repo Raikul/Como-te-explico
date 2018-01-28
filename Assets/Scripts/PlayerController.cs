@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
         if (other.CompareTag("Beacon"))
             plMsk.decays = false;
 
-        Debug.Log("aaa");
+        Debug.Log("You're on a beacon");
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -71,4 +71,6 @@ public class PlayerController : MonoBehaviour {
         if (other.CompareTag("Beacon"))
             plMsk.decays = true;
     }
+
+
 }
